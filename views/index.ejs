@@ -6,15 +6,18 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <ul>
-      <% messages.forEach(message => { %>
-      <li>
-        <h3><%= message.user %></h3>
-        <p><%= message.added %></p>
-        <p><%= message.text %></p>
-      </li>
+    <div class="app-container">
+      <ul>
+        <% messages.forEach(message => { %>
+        <li>
+          <h3><%= message.user %></h3>
+          <p><%= message.added %></p>
+          <p><%= message.text %></p>
+        </li>
 
-      <%})%>
-    </ul>
+        <%})%>
+      </ul>
+      <a href="/new"><button>Create a new message</button></a>
+    </div>
   </body>
 </html>
