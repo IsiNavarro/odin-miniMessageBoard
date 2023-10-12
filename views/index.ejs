@@ -5,19 +5,19 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
+    <h1 class="title"><%= title %></h1>
+    <a href="/new"><button class="createBtn">Create a new message</button></a>
     <div class="app-container">
-      <ul>
+      <ul class="messageList">
         <% messages.forEach(message => { %>
-        <li>
+        <li class="item">
           <h3><%= message.user %></h3>
-          <p><%= message.added %></p>
-          <p><%= message.text %></p>
+          <p class="date"><%= message.added %></p>
+          <p class="text"><%= message.text %></p>
         </li>
 
         <%})%>
       </ul>
-      <a href="/new"><button>Create a new message</button></a>
     </div>
   </body>
 </html>
